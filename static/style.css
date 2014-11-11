@@ -1,0 +1,22 @@
+body {background-color: lemonchiffon;
+      color: blueviolet;
+
+
+}
+
+.message{
+
+    border: 2px solid red;
+    margin: 1%;
+    width: 23%;
+    height:100px;
+    float: left;
+    overflow: scroll;
+
+}
+
+.message p{
+
+    margin: 5px;
+
+}

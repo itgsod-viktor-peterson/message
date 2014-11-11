@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    {% for message in messages %}
+        <div class="message">
+            <p>Message from {{ message.name }}</p>
+            <p>{{ message.message }}</p>
+        </div>
+   {% else %}
+        <p>unbelievable.  No entries here so far</p>
+  {% endfor %}
+{% endblock %}
