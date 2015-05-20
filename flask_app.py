@@ -46,16 +46,12 @@ def message():
 
 #error pages
 
-# @app.errorhandler(404)
-# def page_not_found(e):
-#
-#     return "not found here/bosse"
+@app.errorhandler(404)
+def page_not_found(e):
+    return "Halla sidan funkar ej bosse"
 
 
-@app.errorhandler(405)
-def method_not_allowed(e):
-    return render_template("405.html", 405)
-    #return "metod not allowed"
+
 
 @app.errorhandler(501)
 def all_is_steves_fault(e):
@@ -64,6 +60,14 @@ def all_is_steves_fault(e):
 @app.errorhandler(403)
 def bill_is_not_welcome(e):
     return "sorry bill try another operating system"
+
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return render_template("405.html"), 405
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
